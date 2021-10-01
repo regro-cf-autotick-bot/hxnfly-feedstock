@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/NSLS-II-HXN/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7c14c5c16ab3c91a0c379f099d065bb09e66291fe81a8676cb66014663cb3717
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 70f64c851cf802ab1372531cf67f67c696a9dd3c133bb36e1819dcac7e0c96a0
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -41,5 +41,6 @@ about:
 extra:
   recipe-maintainers:
     - mrakitin
+    - dmgav
     - kbeeperez
     - conda-forge/event-model
