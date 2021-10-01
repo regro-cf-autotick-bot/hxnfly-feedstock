@@ -1,13 +1,13 @@
 {% set name = "hxnfly" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/NSLS-II-HXN/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7c14c5c16ab3c91a0c379f099d065bb09e66291fe81a8676cb66014663cb3717
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d63211f1b2e157f4014326307bfd7c73f7bc8b94045f6696c179626a05a9b9fd
 
 build:
   noarch: python
@@ -25,10 +25,6 @@ requirements:
     - xray-vision
 
 test:
-  requires:      # [not win]
-    - pip        # [not win]
-  commands:      # [not win]
-    - pip check  # [not win]
   imports:
     - hxnfly
 
@@ -41,5 +37,6 @@ about:
 extra:
   recipe-maintainers:
     - mrakitin
+    - dmgav
     - kbeeperez
     - conda-forge/event-model
