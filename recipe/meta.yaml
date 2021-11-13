@@ -1,5 +1,5 @@
 {% set name = "hxnfly" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d63211f1b2e157f4014326307bfd7c73f7bc8b94045f6696c179626a05a9b9fd
+  sha256: 313fb20e7c643b1b8517dd57ba98d35bc41131b195fff8c6df3b8abb980f8d2b
 
 build:
   noarch: python
